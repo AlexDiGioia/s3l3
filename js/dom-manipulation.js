@@ -13,6 +13,7 @@ form.addEventListener("submit", function (event) {
   const btnListElement = document.createElement("button");
   btnListElement.classList.add("btnListElement");
   btnListElement.innerText = "Completata!";
+  task.value=""
 
     btnListElement.addEventListener("click",function(){
         const liItem= this.parentElement;
