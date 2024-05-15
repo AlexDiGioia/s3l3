@@ -13,17 +13,23 @@ form.addEventListener("submit", function (event) {
   const btnListElement = document.createElement("button");
   btnListElement.classList.add("btnListElement");
   btnListElement.innerText = "Completata!";
-  listElement.appendChild(btnListElement);
 
+    btnListElement.addEventListener("click",function(){
+        const liItem= this.parentElement;
+        liItem.style.textDecoration = 'line-through';
+        this.style.visibility="hidden";
+    })
+
+  listElement.appendChild(btnListElement);
   const ListButtons = document.getElementsByClassName("btnListElement");
   console.log(ListButtons);
 
+ 
+
 });
 
-const btnClickListElement = function (event) {
+/*const btnClickListElement = function (event) {
   console.log("Hai cliccato un pulsante");
   console.log("evento: ", event.target);
-};
-
-const ListButtons = document.getElementsByClassName("btnListElement");
-console.log(ListButtons);
+  
+};*/
